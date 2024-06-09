@@ -74,6 +74,11 @@ img {
   display: block;
 }
 
+.favicon {
+  width: 50px;
+  height: 50px;
+}
+
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
