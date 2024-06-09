@@ -343,7 +343,7 @@ img {
   font-size: var(--smaller-font-size);
   font-weight: var(--font-semi);
   border-radius: 0 0 5px 5px;
-  z-index: 1;
+  z-index: 1; /* Ensure this is lower than the lightbox */
 }
 
 .services__title {
@@ -406,6 +406,7 @@ img {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000; /* Ensure the lightbox is above everything else */
 }
 
 .lightbox img {
