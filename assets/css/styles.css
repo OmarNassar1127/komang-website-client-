@@ -60,7 +60,11 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom right, rgba(0, 0, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
   z-index: var(--z-back); /* Ensure this is behind all content */
   pointer-events: none; /* Allow clicks to pass through */
 }
@@ -95,7 +99,8 @@ img {
 /*===== CLASS CSS ===== */
 .section-title {
   position: relative;
-  font-size: var(--h2-font-size);
+  /* font-size: var(--h2-font-size); */
+  font-size: 40px;
   color: var(--first-color);
   margin-top: var(--mb-2);
   margin-bottom: var(--mb-4);
@@ -109,7 +114,7 @@ img {
   left: 0;
   right: 0;
   margin: auto;
-  top: 2rem;
+  top: 3.5rem;
   background-color: var(--first-color);
 }
 
@@ -346,7 +351,7 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: #50C878;
+  background-color: #50c878;
   /* 3DED97 */
   color: #fff;
   padding: 5px 10px;
@@ -418,8 +423,8 @@ img {
 
 .services__price {
   font-size: 1.25rem;
-  color: #007bff;
-  margin-bottom: 1rem;
+  margin-bottom: 2px;
+  margin-top: 4px;
 }
 
 .services__description {
@@ -576,7 +581,7 @@ img {
   }
   .section-title::after {
     width: 80px;
-    top: 3rem;
+    top: 3.8rem;
   }
   .nav {
     height: calc(var(--header-height) + 1.5rem);
@@ -727,5 +732,122 @@ img {
 @media screen and (min-width: 768px) {
   .catalogue__container {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Price modal styles */
+.price-highlight {
+  color: blue;
+}
+
+.price-link {
+  color: black;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 700; /* Adjust to make the text bolder */
+  font-size: 1.1rem; /* Adjust to make the text thicker/larger */
+}
+
+.price-modal-button:hover {
+  color: blue;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.price-table th {
+  background-color: var(--first-color);
+  color: white;
+}
+
+.price-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.price-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Responsive modal styles */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    margin: 20% auto;
+    padding: 15px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 6px;
+  }
+
+  .close-button {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    margin: 25% auto;
+    padding: 10px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .close-button {
+    font-size: 20px;
   }
 }

@@ -102,13 +102,43 @@ document.addEventListener("DOMContentLoaded", () => {
   lightbox.appendChild(img);
 
   clickableImages.forEach((image) => {
-      image.addEventListener("click", () => {
-          img.src = image.src;
-          lightbox.classList.add("visible");
-      });
+    image.addEventListener("click", () => {
+      img.src = image.src;
+      lightbox.classList.add("visible");
+    });
   });
 
   lightbox.addEventListener("click", () => {
-      lightbox.classList.remove("visible");
+    lightbox.classList.remove("visible");
+  });
+});
+
+//price modal
+document.addEventListener("DOMContentLoaded", function () {
+  const modalLinks = document.querySelectorAll(".price-link");
+  const modals = document.querySelectorAll(".modal");
+  const closeButtons = document.querySelectorAll(".close-button");
+
+  modalLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      const targetModal = document.querySelector(link.dataset.modalTarget);
+      targetModal.style.display = "block";
+    });
+  });
+
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetModal = document.querySelector(button.dataset.modalClose);
+      targetModal.style.display = "none";
+    });
+  });
+
+  window.addEventListener("click", (event) => {
+    modals.forEach((modal) => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
   });
 });
