@@ -651,14 +651,14 @@ img {
 }
 
 /* ===== CATALOGUE ===== */
-.catalogue {
+/* .catalogue {
   padding: 2rem 0;
-}
+} */
 
 .catalogue__container {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .catalogue__card {
