@@ -696,6 +696,55 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
 }
 
+.catalogue__presentation {
+  text-align: center;
+  font-size: 1.25rem;
+  color: var(--second-color);
+  font-weight: 600;
+  margin: 2rem auto;
+  padding: 1rem;
+  line-height: 1.5;
+  border: 2px solid var(--first-color);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.catalogue__presentation a {
+  color: var(--first-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.catalogue__presentation a:hover {
+  text-decoration: underline;
+}
+
+.catalogue__pres {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add padding to create space on mobile */
+}
+
+.catalogue__container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+@media screen and (min-width: 768px) {
+  .catalogue__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .catalogue__pres {
+    padding: 0 1.5rem; /* Increase padding for smaller screens */
+  }
+}
+
 .catalogue__card {
   display: flex;
   flex-direction: column;
