@@ -342,6 +342,20 @@ img {
   z-index: 1; /* Ensure this is lower than the lightbox */
 }
 
+.hassle-free {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #50C878;
+  /* 3DED97 */
+  color: #fff;
+  padding: 5px 10px;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi);
+  border-radius: 0 10px 10px 10px;
+  z-index: 1; /* Ensure this is lower than the lightbox */
+}
+
 /* Services Section */
 .services {
   padding: 2rem 0;
