@@ -843,8 +843,8 @@ img {
 
   .price-table th,
   .price-table td {
-    padding: 4px;
-    font-size: 12px;
+    padding: 2px;
+    font-size: 9px;
   }
 
   .close-button {
