@@ -338,7 +338,7 @@ img {
   padding: 5px 10px;
   font-size: var(--smaller-font-size);
   font-weight: var(--font-semi);
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 10px 10px 10px;
   z-index: 1; /* Ensure this is lower than the lightbox */
 }
 
