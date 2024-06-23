@@ -240,11 +240,15 @@ img {
   bottom: 0;
   width: 260px;
 }
+
 .home__blob {
   fill: var(--first-color);
 }
+
 .home__blob-img {
-  width: 360px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*BUTTONS*/
