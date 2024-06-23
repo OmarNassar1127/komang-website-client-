@@ -615,7 +615,7 @@ img {
     padding-top: 2rem;
   }
   .about__img img {
-    width: 300px;
+    width: 388px;
   }
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
@@ -634,7 +634,7 @@ img {
     margin-right: auto;
   }
   .home {
-    padding: 10rem 0 2rem;
+    padding: 10rem 0 6rem;
   }
   .home__img {
     width: 450px;
